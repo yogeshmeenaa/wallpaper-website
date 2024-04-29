@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper Gallery</title>
+    <link rel="stylesheet" href="mainstyles.css">
+
+
+</head>
+<body>
+    <main>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/" class="stename-1"><span class="site-name">Wall</span>fyre</a>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="category.html">Categories</a></li>
+            </ul>
+            <form class="search-form">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </form>
+        </nav>
+    
+        <div id="wallpapersContainer">
+            <!-- Wallpapers will be displayed here -->
+            <div class="wallpaper">
+                <img src="image1.jpg" alt="Wallpaper 1">
+                <p class="tags">Tags: <span></span></p>
+            </div>
+            <div class="wallpaper">
+                <img src="image2.jpg" alt="Wallpaper 2">
+                <p class="tags">Tags: <span ></span></p>
+            </div>
+            <!-- Add more wallpaper divs as needed -->
+        </div>
+    
+    </main>
+ 
+    <!-- Include JS scripts here -->
+    
+    
+    <script src="fetch_wallpapers.js"></script>
+</body>
+</html>

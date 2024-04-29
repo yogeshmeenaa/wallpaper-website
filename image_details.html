@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Details</title>
+    <!-- Add any necessary CSS styles here -->
+</head>
+<body>
+    <div class="image-details">
+        <img id="image" src="" alt="Image">
+        <h1 id="title"></h1>
+        <p id="author"></p>
+        <p id="tags"></p>
+        <p id="downloadCount"></p> <!-- Display download count here -->
+        <!-- Add a download link to the button -->
+        <a id="downloadLink" href="#" download><button id="downloadBtn">Download</button></a>
+    </div>
+
+    <script>
+        // Function to fetch image details based on the wallpaper ID
+        function fetchImageDetails(wallpaperId) {
+            fetch(`fetch_image_details.php?id=${wallpaperId}`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('image').src = data.image_path;
+                    document.getElementById('title').textContent = data.title;
+                    document.getElementById('author').textContent = 'Author: ' + data.author;
+                    document.getElementById('tags').textContent = 'Tags: ' + data.tags;
+                    document.getElementById('downloadCount').textContent = 'Download Count: ' + data.download_count;
+                    // Update the download link href attribute with the image path
+                    document.getElementById('downloadLink').href = data.image_path;
+                })
+                .catch(error => console.error('Error fetching image details:', error));
+        }
+
+        // Get the wallpaper ID from the query parameters
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const wallpaperId = urlParams.get('id');
+
+        // Fetch image details based on the wallpaper ID
+        fetchImageDetails(wallpaperId);
+    </script>
+</body>
+</html>

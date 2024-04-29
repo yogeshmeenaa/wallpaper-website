@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+        font-family: Arial, sans-serif;
+        box-sizing: border-box;
+}
+
+
+main{
+    padding: 0 15%;
+}
+/* CSS styles for the navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.site-name {
+    font-size: 1.2rem;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu li a:hover {
+    text-decoration: none;
+    color: salmon;
+}
+
+
+.search-form {
+    display: flex;
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-form button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Masonry grid layout styles */
+#wallpapersContainer {
+    width: 100%;
+    margin-top:.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.wallpaper {
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.wallpaper img {
+    width: 100%;
+    display: block;
+}
+
+.wallpaper p {
+    padding: 10px;
+    background-color: #f1f1f1;
+    margin: 0;
+    text-decoration: none;
+}
+
+.site-name{
+    color: salmon;
+    font-size: 1.5rem;
+}
+.stename-1{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+a{
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+  
+}
+
+.tags , .tagcolor{
+    color: salmon;
+}
+
+span{
+    border: 2px solid salmon;
+}
